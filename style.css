@@ -1,0 +1,152 @@
+body {
+    background-image: url('img/bak.jpg'); /* 背景图片路径 */
+    background-size: cover;                
+    background-position: center;           
+    background-repeat: no-repeat;          
+    background-attachment: fixed;          
+    height: 100vh;                         
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    margin-top: 80px; /* 将头像和文本往下放 */
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 将头像设置为圆形 */
+    opacity: 0; /* 初始透明度 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 添加变换效果 */
+    transform: translateY(20px); /* 初始向下偏移 */
+}
+
+.profile img.visible {
+    opacity: 1; /* 变为不透明 */
+    transform: translateY(0); /* 恢复原位 */
+}
+
+.profile h1 {
+    color: rgba(255, 255, 255, 0.8); /* 半透明字体颜色 */
+    font-size: 24px; /* 设置字体大小 */
+    opacity: 0; /* 初始透明度 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 过渡效果 */
+    transform: translateY(20px); /* 初始向下偏移 */
+}
+
+.profile h1.visible {
+    opacity: 1; /* 变为不透明 */
+    transform: translateY(0); /* 恢复原位 */
+}
+
+.quote {
+    margin: 20px 0; /* 添加上下边距 */
+    font-style: italic; /* 使名言字体为斜体 */
+    text-align: center;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8); /* 半透明字体颜色 */
+    opacity: 0; /* 初始透明度 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 过渡效果 */
+    transform: translateY(20px); /* 初始向下偏移 */
+    margin-top: 125px;
+}
+
+.quote.visible {
+    opacity: 1; /* 变为不透明 */
+    transform: translateY(0); /* 恢复原位 */
+}
+
+.info {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff; /* 确保文字颜色为白色 */
+    font-size: 18px; /* 调整字体大小 */
+    opacity: 0; /* 初始透明度 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 过渡效果 */
+    transform: translateY(20px); /* 初始向下偏移 */
+}
+
+.info.visible {
+    opacity: 1; /* 变为不透明 */
+    transform: translateY(0); /* 恢复原位 */
+}
+
+footer {
+    margin-top: auto; /* 将 footer 推到页面底部 */
+    text-align: center;
+    padding: 20px;
+    /*background-color: rgba(0, 0, 0, 0.5); /* 背景色半透明 */
+}
+
+.social-links {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 居中对齐 */
+    flex-wrap: wrap; /* 允许换行 */
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: #ffffff; /* 按钮文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    margin-top: 10px;
+    font-size: 1.2em; /* 按钮字体大小 */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.social-icon {
+    margin: 0 15px; /* 设置左右间距 */
+    transition: filter 0.3s ease; /* 平滑过渡效果 */
+}
+
+.social-icon img {
+    width: 40px;  /* 设置图标的宽度 */
+    height: 40px; /* 设置图标的高度 */
+    filter: invert(0); /* 默认颜色 */
+    transition: filter 0.3s ease; /* 悬停效果的平滑过渡 */
+}
+
+.social-icon:hover img {
+    filter: invert(1); /* 鼠标悬停时反转颜色 */
+}
+
+/* 容器布局，水平排列按钮 */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 自定义按钮样式 */
+.custom-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    border-radius: 20px; /* 圆角 */
+    text-decoration: none; /* 移除链接下划线 */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 鼠标悬停效果 */
+.custom-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* 背景颜色变深 */
+    transform: translateY(-5px); /* 轻微向上移动 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影 */
+}
+
+/* 针对按钮的文字颜色变化 */
+.custom-button:hover {
+    color: #f0f0f0;
+}
